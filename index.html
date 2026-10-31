@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOFIABE Premium — Navettes Tana ↔ Antsirabe</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a1f44">
+  <style>
+    :root { --navy:#0a1f44; --gold:#d4af37; --white:#fff; --gray:#f5f7fa; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:system-ui,sans-serif; background:var(--gray); color:#222; line-height:1.5; }
+    header { background:var(--navy); color:white; text-align:center; padding:1.2rem 1rem; }
+    header img { width:80px; height:80px; border-radius:50%; border:3px solid var(--gold); margin-bottom:0.5rem; }
+    .premium { color:var(--gold); font-size:0.8rem; letter-spacing:2px; }
+    nav { display:flex; background:#132a5a; overflow-x:auto; }
+    nav button { flex:1; background:transparent; color:white; border:none; padding:0.8rem; cursor:pointer; font-size:0.9rem; white-space:nowrap; }
+    nav button.active { background:var(--gold); color:var(--navy); font-weight:600; }
+    .container { max-width:640px; margin:1.2rem auto; padding:0 1rem; }
+    .card { background:white; border-radius:14px; padding:1.5rem; margin-bottom:1rem; box-shadow:0 4px 15px rgba(0,0,0,0.06); }
+    h2 { color:var(--navy); margin-bottom:0.8rem; }
+    button.primary { background:var(--navy); color:white; border:none; padding:0.85rem; border-radius:10px; width:100%; font-weight:600; cursor:pointer; margin-top:0.5rem; }
+    button.gold { background:var(--gold); color:var(--navy); border:none; padding:0.6rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; }
+    input, select { width:100%; padding:0.8rem; border:1.5px solid #ddd; border-radius:8px; margin:0.3rem 0; font-size:1rem; }
+    .hidden { display:none; }
+    .price { font-size:1.8rem; color:var(--gold); font-weight:800; text-align:center; margin:0.5rem 0; }
+    .times { display:flex; flex-wrap:wrap; gap:6px; }
+    .time { background:var(--navy); color:white; padding:5px 10px; border-radius:6px; font-size:0.85rem; }
+    footer { text-align:center; padding:2rem 1rem; color:#666; font-size:0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="KOFIABE Premium">
+    <div class="premium">PREMIUM</div>
+    <h1 style="font-size:1.4rem; margin-top:0.3rem;">KOFIABE</h1>
+    <p style="font-size:0.9rem; opacity:0.9;">Navettes Tana ↔ Antsirabe</p>
+  </header>
+  <nav>
+    <button class="active" onclick="show('home')">Accueil</button>
+    <button onclick="show('horaires')">Horaires</button>
+    <button onclick="show('reserver')">Réserver</button>
+    <button onclick="show('contacts')">Contacts</button>
+    <button onclick="show('agence')">Agence</button>
+    <button onclick="show('chauffeur')">Chauffeur</button>
+  </nav>
+
+  <div class="container">
+    <div id="home">
+      <div class="card" style="text-align:center;">
+        <h2>Navettes Premium</h2>
+        <div class="price">23 000 Ar</div>
+        <p>Voyagez confortablement entre Antananarivo et Antsirabe.</p>
+        <p style="font-style:italic; margin-top:0.5rem;">« Le service premium que vous méritez »</p>
+        <button class="primary" style="max-width:260px; margin:1rem auto;" onclick="show('reserver')">Réserver maintenant</button>
+      </div>
+    </div>
+    <!-- Simplified for initial push - full version available in local files -->
+    <p style="text-align:center; margin:2rem;">Site KOFIABE Premium - Version initiale poussée sur GitHub.<br>Le fichier complet est dans le dépôt local.</p>
+  </div>
+  <footer>KOFIABE Premium — 23 000 Ar</footer>
+</body>
+</html>
